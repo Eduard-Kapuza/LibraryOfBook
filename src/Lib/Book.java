@@ -2,6 +2,7 @@ package Lib;
 
 import java.time.LocalDate;
 import static Lib.ColorText.*;
+
 public class Book {
     private String nameOfBook;
     private String writerOfBook;
@@ -12,21 +13,27 @@ public class Book {
         this.writerOfBook = writerOfBook;
         this.dateOfEdition = dateOfEdition;
     }
+
     public void setNameOfBook(String nameOfBook) {
         this.nameOfBook = nameOfBook;
     }
+
     public void setWriterOfBook(String writerOfBook) {
         this.writerOfBook = writerOfBook;
     }
+
     public void setDateOfEdition(LocalDate dateOfEdition) {
         this.dateOfEdition = dateOfEdition;
     }
+
     public String getNameOfBook() {
         return nameOfBook;
     }
+
     public String getWriterOfBook() {
         return writerOfBook;
     }
+
     public LocalDate getDateOfEdition() {
         return dateOfEdition;
     }

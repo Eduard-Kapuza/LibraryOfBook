@@ -8,12 +8,15 @@ import Lib.ComparatorAndComparable.*;
 import static Lib.ColorText.*;
 
 public class Library {
+
     public static void getListBook(ArrayList<Book> al) {
+
         for (Book book : al) {
             System.out.println(ANSI_GREEN+"Book ¹" + ((al.indexOf(book)) + 1));
             System.out.print(book);
         }
     }
+
     public static void addBook(ArrayList<Book> aL) {
 
         System.out.println(ANSI_PURPLE+"Enter the book title, book author, the year of publishing(YYYY-MM-DD)"+ANSI_RESET);
@@ -21,7 +24,9 @@ public class Library {
                 , scanString()
                 , LocalDate.parse(scanString())));
     }
+
     public static void removeBook(ArrayList<Book> al) {
+
         System.out.println(ANSI_PURPLE+"Enter number a book to need remove"+ANSI_RESET);
         int numberBook=scanInt();
         if (numberBook>al.size()){
@@ -32,8 +37,8 @@ public class Library {
     }
 
     public static void sorted(ArrayList<Book> al){
-        System.out.println(ANSI_PURPLE+"To choice sort"+ANSI_RESET);
 
+        System.out.println(ANSI_PURPLE+"To choice sort"+ANSI_RESET);
         System.out.println("1) Sort by name\n" +
                 "2) Sort by author\n" +
                 "3) Sort by date edition\n");
@@ -63,6 +68,7 @@ public class Library {
                         "3) Change of date edition a book\n");
 
         switch (scanInt()){
+
             case 1:
                 System.out.println("Enter new name a book");
                 al.get(numberBook-1).setNameOfBook(scanString());
@@ -83,6 +89,7 @@ public class Library {
     }
 
     public static void showMenu() {
+
         System.out.println(ANSI_YELLOW+"--------------------------------------\n" +ANSI_RESET +
                 ANSI_FAT+"1) Show list a books\n" +
                 "2) Add a book\n" +
@@ -94,13 +101,16 @@ public class Library {
     }
 
     public static String scanString(){
+
         Scanner scanner=new Scanner(System.in);
         String temp=scanner.nextLine();
         return temp;
     }
 
+
     public static int scanInt(){
         Scanner scanner=new Scanner(System.in);
+
         int temp=scanner.nextInt();
         return temp;
     }
